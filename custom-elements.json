@@ -1,0 +1,56 @@
+{
+    "schemaVersion": "1.0.0",
+    "readme": "README.md",
+    "modules": [
+        {
+            "kind": "javascript-module",
+            "path": "dist/ColorWheel.js",
+            "declarations": [
+                {
+                    "kind": "class",
+                    "description": "a color wheel",
+                    "name": "ColorWheel",
+                    "members": [
+                        {
+                            "kind": "field",
+                            "name": "value",
+                            "type":  {
+                                "text": "string"
+                            }
+                        }
+                    ],
+                    "attributes": [
+                        {
+                            "name": "value",
+                            "fieldName": "value"
+                        }
+                    ],
+                    "events": [
+                        {
+                            "name": "value-changed",
+                            "description": "raised when the value changes",
+                            "type": {
+                                "title": "string"
+                            }
+                        }
+                    ],
+                    "superclass": {
+                        "name": "BaseCustomWebComponentConstructorAppend"
+                    },
+                    "tagName": "node-projects-color-wheel",
+                    "customElement": true
+                }
+            ],
+            "exports": [
+                {
+                    "kind": "custom-element-definition",
+                    "name": "node-projects-color-wheel",
+                    "declaration": {
+                        "name": "ColorWheel",
+                        "module": "dist/ColorWheel.js"
+                    }
+                }
+            ]
+        }
+    ]
+}

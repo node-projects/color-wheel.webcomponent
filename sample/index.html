@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script type="esms-options">
+            {
+            "shimMode": true
+            }
+        </script>
+    <script src="../node_modules/es-module-shims/dist/es-module-shims.js"></script>
+    <script>
+        const importMap = {
+            imports: {
+                "@node-projects/base-custom-webcomponent": "./node_modules/@node-projects/base-custom-webcomponent/"
+            }
+        };
+        importShim.addImportMap(importMap);
+
+        importShim('../dist/index.js');
+    </script>
+    <style>
+        body {
+            background: #5d5f60;
+        }
+    </style>
+</head>
+
+<body>
+    <node-projects-color-wheel style="position: absolute; width: 300px; height: 300px; position: absolute; top: 20px; left: 20px;">
+    </node-projects-color-wheel>
+
+    <node-projects-color-wheel value="#ff4fa4" style="position: absolute; width: 200px; height: 200px; position: absolute; top: 70px; left: 340px;">
+    </node-projects-color-wheel>
+
+    <node-projects-complex-color-wheel style="position: absolute; width: 300px; height: 300px; position: absolute; top: 500px">
+    </node-projects-complex-color-wheel>
+</body>
+
+</html>

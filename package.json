@@ -1,0 +1,34 @@
+{
+  "name": "@node-projects/color-wheel.webcomponent",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/@node-projects/color-wheel.webcomponent.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/@node-projects/color-wheel.webcomponent/issues"
+  },
+  "homepage": "https://github.com/@node-projects/color-wheel.webcomponent#readme",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "web-dev-server --node-resolve --open sample/index.html",
+    "build": "tsc",
+    "release": "release-it"
+  },
+  "main": "./dist/index.js",
+  "customElements": "custom-elements.json",
+  "devDependencies": {
+    "@web/dev-server": "^0.4.5",
+    "es-module-shims": "^1.10.0",
+    "release-it": "^17.2.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@node-projects/base-custom-webcomponent": "^0.27.6"
+  }
+}
