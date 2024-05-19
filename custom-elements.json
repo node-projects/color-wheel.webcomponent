@@ -46,8 +46,56 @@
                     "kind": "custom-element-definition",
                     "name": "node-projects-color-wheel",
                     "declaration": {
-                        "name": "ColorWheel",
-                        "module": "dist/ColorWheel.js"
+                        "name": "ColorWheel"
+                    }
+                }
+            ]
+        },
+        {
+            "kind": "javascript-module",
+            "path": "dist/ComplexColorWheel.js",
+            "declarations": [
+                {
+                    "kind": "class",
+                    "description": "a color wheel",
+                    "name": "ComplexColorWheel",
+                    "members": [
+                        {
+                            "kind": "field",
+                            "name": "value",
+                            "type":  {
+                                "text": "string"
+                            }
+                        }
+                    ],
+                    "attributes": [
+                        {
+                            "name": "value",
+                            "fieldName": "value"
+                        }
+                    ],
+                    "events": [
+                        {
+                            "name": "value-changed",
+                            "description": "raised when the value changes",
+                            "type": {
+                                "title": "string"
+                            }
+                        }
+                    ],
+                    "superclass": {
+                        "name": "ColorWheel"
+                    },
+                    "tagName": "node-projects-complex-color-wheel",
+                    "customElement": true
+                }
+            ],
+            "exports": [
+                {
+                    "kind": "custom-element-definition",
+                    "name": "node-projects-color-wheel",
+                    "declaration": {
+                        "name": "ComplexColorWheel"
                     }
                 }
             ]

@@ -191,6 +191,7 @@ export class ComplexColorWheel extends ColorWheel {
 
     override updateAll() {
         super.updateAll();
+        this.redrawSlider();
         this._input.value = this.value;
     }
 
@@ -201,6 +202,10 @@ export class ComplexColorWheel extends ColorWheel {
             let position = this._sliderBounds.height * (1 - this.hsv[2]) - (this._sliderPointerBounds.height / 2);
             this._sliderPointer.style.top = position + 'px';
         }
+    }
+
+    makeGradient(colour1, colour2) {
+        return `background: linear-gradient(${colour1} 0%,${colour2} 100%);`;
     }
 }
 
