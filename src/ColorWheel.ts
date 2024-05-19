@@ -48,6 +48,9 @@ export class ColorWheel extends BaseCustomWebComponentConstructorAppend {
     public static properties = {
         value: String
     }
+
+    public static get observedAttributes() { return ['value']; }
+
     private _ctx: CanvasRenderingContext2D;
     private _image: HTMLImageElement;
 
