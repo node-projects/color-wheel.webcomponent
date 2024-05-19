@@ -53,8 +53,12 @@ export class ColorWheel extends BaseCustomWebComponentConstructorAppend {
         return this.getAttribute('value') ?? '#ffffff';
     }
     public set value(value) {
-        this.setAttribute('value', value);
-        this.dispatchEvent(new CustomEvent('value-changed', { detail: { value } }));
+        if (!value)
+            value = '#ffffff';
+        if (value !== this.value) {
+            this.setAttribute('value', value);
+            this.dispatchEvent(new CustomEvent('value-changed', { detail: { value } }));
+        }
     }
 
     protected _pickerContainer: HTMLDivElement;
